@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player - Song 2</title>
+  <style>
+    body {
+      font-family: cursive;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .player {
+      background: #333;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .cover {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    button, a {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff4b5c;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button:hover, a:hover {
+      background: #ff1e3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player">
+    <img src="images.jpg/WhatsApp Image 2025-08-29 at 20.46.23_46651cc2.jpg" alt="Song Cover" class="cover" id="cover">
+    <h2 id="title">Ye Chota Nuvvunna</h2>
+
+    <!-- 🎧 Audio -->
+    <audio id="audio" src="songs.mp3/WhatsApp Audio 2025-08-29 at 20.46.23_e900ad16.mp3"></audio>
+
+    <!-- 🎛 Controls -->
+    <div>
+      <button onclick="playSong()">▶ Play</button>
+      <button onclick="pauseSong()">⏸ Pause</button>
+      <a href="song1.html">⏮ Previous</a>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById("audio");
+
+    function playSong() {
+      audio.play();
+    }
+
+    function pauseSong() {
+      audio.pause();
+    }
+  </script>
+
+</body>
+</html>
